@@ -7,23 +7,24 @@ Then("I should see login button") do
 end
 
 When("I click loggin button") do
-  find("div", role: "button", exact: true).click
+  find('div[data-testID="loginButton"]').click
 end
 
-Then("Facebook authorize window show up") do
+When("I click login button then Facebook authorize window show up and close window") do
+  facebook_window = window_opened_by do
+    find('div[data-testID="loginButton"]').click
+  end
+  within_window facebook_window do
+    page.current_window.close
+  end
 end
 
-But("I turn off authorize window") do
-end
-
-And("I click to accept authorize") do
+When("I click login button then Facebook authorize window show up and authorize") do
 end
 
 Then("I can see my facebook info") do
 end
 
 And("I click logout button") do
-end
-
-Then("I get back to home page") do
+  # find('div[data-testID="logoutButton"]').click
 end

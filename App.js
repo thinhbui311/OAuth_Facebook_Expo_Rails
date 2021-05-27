@@ -20,6 +20,8 @@ export default function App() {
   const [username, setUsername] = React.useState();
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState();
+  const loginButtonID = "loginButton";
+  const logoutButtonID = "logoutButton";
 
   const onLogout = React.useCallback(() => {
     setUsername();
@@ -64,14 +66,16 @@ export default function App() {
         <View>
           <Text style={styles.title}>Hi {username}!</Text>
           <Button
+            testID="logoutButton"
             title="Logout to try again"
             onPress={onLogout}
           />
         </View>
       ) : (
         <View>
-          <Text style={styles.title}>Facebook login</Text>
-          <Button className="loginButton"
+          <Text  id={loginButtonID} style={styles.title}>Facebook login</Text>
+          <Button
+            testID="loginButton"
             disabled={!authRequest}
             title="Login with Facebook"
             onPress={() => {
