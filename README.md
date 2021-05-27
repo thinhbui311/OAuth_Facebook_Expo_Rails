@@ -26,3 +26,7 @@ test-thinhbui311
 ├── App.js ➡️ FrontEnd App
 └── backend ➡️ Backend API to request access tokens and user info from Facebook Graph API
 ```
+
+#### Video sample run app
+
+* https://drive.google.com/file/d/1QpkEI1FO-au_UXSy6nfcpwCCUZ_xfRU3/view?usp=sharing
