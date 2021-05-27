@@ -14,13 +14,16 @@ group :development, :test do
 end
 
 group :test do
+  gem "capybara"
   gem "cucumber-rails", require: false
   gem "guard-rspec"
   gem "rspec-collection_matchers"
   gem "rspec-mocks"
   gem "rspec-rails", "~> 5.0.0"
   gem "rspec-retry"
+  gem "selenium-webdriver"
   gem "simplecov", "0.16", :require => false
+  gem "webdrivers", "~> 4.0"
   gem "webmock"
 end
 

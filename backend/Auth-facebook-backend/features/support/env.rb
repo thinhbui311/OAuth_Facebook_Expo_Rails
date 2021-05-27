@@ -6,6 +6,12 @@
 
 require 'cucumber/rails'
 
+Capybara.run_server = false
+Capybara.default_driver = :selenium_chrome
+Capybara.app_host = "http://localhost:19006"
+Capybara.javascript_driver = :selenium_chrome
+
+ENV['CR_REMOVE_RACK_TEST_HELPERS'] = 'true'
 # frozen_string_literal: true
 
 # Capybara defaults to CSS3 selectors rather than XPath.

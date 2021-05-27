@@ -71,7 +71,7 @@ export default function App() {
       ) : (
         <View>
           <Text style={styles.title}>Facebook login</Text>
-          <Button
+          <Button className="loginButton"
             disabled={!authRequest}
             title="Login with Facebook"
             onPress={() => {
